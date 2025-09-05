@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: amansinghpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amansinghpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: amansinghpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: amansinghpipelinesjavascriptdocker 
+          image: myappacr25722.azurecr.io/amansinghpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
